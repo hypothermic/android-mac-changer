@@ -62,9 +62,9 @@ main()
     if ! [ $(id -u) = 0 ]; then
         echo "Elevating to root shell..."
         if [ "$USE_BUSYBOX" = 1 ]; then
-            /system/xbin/su -c "/system/xbin/sh"
+            /system/xbin/su -l -m # -c "/system/xbin/sh"
         else
-            /system/bin/su -c "/system/bin/sh"
+            /system/bin/su -l -m # -c "/system/bin/sh"
         fi
     fi
 
