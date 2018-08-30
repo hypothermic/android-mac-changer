@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+
+\usepackage{graphicx}
+
+% Copyright (c) 2018 hypothermic <admin@hypothermic.nl>
+% Licensed under the MIT License
+
+\title{\textbf{Usage of \textit{changer.sh}}}
+\author{Android Universal MAC Changer}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+  \Large\textbf{Quick start} \\
+\end{center}
+
+Firstly, transfer this file to your Android device's local storage.
+
+Example path: \textit{/sdcard/changer.sh} \\
+
+Now, give execution permission to the script:
+
+\begin{lstlisting}
+\$ chmod +x /sdcard/changer.sh
+\end{lstlisting} \\
+
+Finally, you can run the script as root:
+
+\begin{lstlisting}
+\$ /system/bin/su -c "/sdcard/changer.sh"
+\end{lstlisting}
+
+\begin{center}
+  \Large\textbf{Syntax} \\
+\end{center}
+
+Usage: changer.sh [-r | -a 00:00:00:00:00] [-hb] \\
+
+\begin{list_type}  
+  \item -a [addr] \quad Specify a specific address to work with
+  \item -r \quad \quad \quad \quad Generate a random MAC address to use
+  \item -h \quad \quad \quad \quad Show this help message
+  \item -b \quad \quad \quad \quad Enable BusyBox mode (takes advantage of /system/xbin/*)
+\end{list_type}
+
+\end{document}
