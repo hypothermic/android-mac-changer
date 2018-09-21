@@ -1,0 +1,3 @@
+*tex linguist-language=Tex
+docs/*.* linguist-documentation=false 
+docs/*.tex linguist-detectable=true
